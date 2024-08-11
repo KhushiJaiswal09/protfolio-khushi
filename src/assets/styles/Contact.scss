@@ -1,0 +1,59 @@
+.contact_wrapper {
+  .contact-form {
+    padding-top: 20px;
+
+    button {
+      float: right;
+      background-color: white;
+      color: #050f0b;
+      &:hover {
+        background-color: #5000ca;
+        color: white;
+      }
+    }
+
+    // Remove or adjust the fieldset background if necessary
+    // fieldset {
+    //   border: none; // Removes the border and background color
+    // }
+  }
+}
+
+#name,
+#email,
+#message {
+  background-color: white; // Ensure background color is set to white
+  width: 100%; // Ensure full-width for alignment
+}
+
+.form-flex {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 15px;
+
+  .MuiFormControl-root {
+    width: 100%;
+
+    // Adjustments to ensure text and label colors are black
+    .MuiInputBase-root {
+      color: #000; // Text color
+    }
+
+    .MuiFormLabel-root {
+      color: #000; // Label color
+    }
+  }
+}
+
+.body-form {
+  width: 100% !important;
+  margin-bottom: 15px !important;
+
+  .MuiInputBase-root {
+    color: #000; // Text color
+  }
+
+  .MuiFormLabel-root {
+    color: #000; // Label color
+  }
+}
