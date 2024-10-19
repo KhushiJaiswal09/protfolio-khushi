@@ -15,15 +15,12 @@ function Experience() {
               <WorkIcon />
             </Avatar>
             <Box>
-              <Typography variant="h6">Web Development Intern</Typography>
+              <Typography variant="h6">DSW Core Student Council</Typography>
               <Typography variant="subtitle2" color="textSecondary">
-                Eshway, Remote | Jan 2024 – Mar 2024
+                Vellore Institute of Technology, Bhopal
               </Typography>
               <Typography variant="body2" color="textSecondary" sx={{ mt: 1.5 }}>
-                During my internship at Eshway, I engineered their dashboard using Next.js, focusing on performance optimization and sleek design with Tailwind CSS. I implemented dynamic routing for efficient data fetching and deployed the application on AWS EC2, ensuring scalability. Collaborating with a cross-functional team, we created a responsive, user-friendly experience that improved both performance and satisfaction. Leveraging Git for version control, the development efficiency increased by 40%, and load times reduced by 25%.
-              </Typography>
-              <Typography variant="body2" color="textSecondary" sx={{ mt: 1 }}>
-                <strong>Tech Stack:</strong> Next.js, Node.js, Tailwind.CSS, ShadCN, Git, Figma, AWS.
+              As a core member of the DSW Student Council, I managed and tracked various college events, ensuring everything ran smoothly. I coordinated with clubs, resolved issues, and oversaw event logistics, contributing to the success of student activities.
               </Typography>
             </Box>
           </CardContent>

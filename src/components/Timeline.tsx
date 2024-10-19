@@ -31,7 +31,7 @@ function Timeline() {
             icon={<FontAwesomeIcon icon={faUserGraduate} />}
           >
             <h3 className="vertical-timeline-element-title">H.S.C</h3>
-            <h6 className="vertical-timeline-element-subtitle">S.E.S Junior College,Panvel</h6>
+            <h6 className="vertical-timeline-element-subtitle">St. Anthony's School, Barabanki</h6>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -40,7 +40,7 @@ function Timeline() {
             icon={<FontAwesomeIcon icon={faUserGraduate} />}
           >
             <h3 className="vertical-timeline-element-title">S.S.C</h3>
-            <h6 className="vertical-timeline-element-subtitle">S.E.S High School,Panvel</h6>
+            <h6 className="vertical-timeline-element-subtitle">St. Anthony's School, Barabanki</h6>
            
           </VerticalTimelineElement>
           

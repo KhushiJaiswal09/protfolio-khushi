@@ -13,7 +13,6 @@ const labelsFirst = [
     "CSS3",
     "Tailwind CSS",
     "Next",
-    "Figma",
 ];
 
 const labelsSecond = [
@@ -22,20 +21,15 @@ const labelsSecond = [
     "Python",
     "MongoDB",
     "MySQL",
-    "PostgreSQL",
-    "Socket.io",
     "Git",
     "AWS",
-    "Docker",
     
 ];
 
 const labelsThird = [
     "Java",
-    "Swing",
-    "Jsoup",
-    "OOPS Concept",
     "JDBC",
+    "Object Oriented Programming Concepts",
     
 ];
 

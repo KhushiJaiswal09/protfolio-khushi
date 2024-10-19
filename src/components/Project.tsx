@@ -1,5 +1,5 @@
 import React from "react";
-import kennel from "../assets/images/kennelmock.png"
+import faceEmotion from "../assets/images/faceEmotion.jpg"
 import ondoc from "../assets/images/ondoc.png"
 import stock from "../assets/images/stock1.png"
 import pern from "../assets/images/pernmock1.png"
@@ -7,6 +7,11 @@ import ai from "../assets/images/ai.png"
 import expense from "../assets/images/expense.png"
 // import notion from "../assets/images/notion.png"
 import vsextension from "../assets/images/vsextension.png"
+import Exploryaar from "../assets/images/Exploryaar.jpg"
+import Plantonia from "../assets/images/Plantonia.jpg"
+import Webclash from "../assets/images/Webclash.jpg"
+import Portfolio from "../assets/images/Portfolio.jpg"
+
 
 import '../assets/styles/Project.scss';
 
@@ -16,51 +21,53 @@ function Project() {
         <h1>Personal Projects</h1>
         <div className="projects-grid">
             <div className="project">
-                <a href="https://github.com/Muskan-1003/Kennel" target="_blank" rel="noreferrer"><img src={kennel} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/Muskan-1003/Kennel" target="_blank" rel="noreferrer"><h2>Kennel</h2></a>
-                <p>Tech stack:React.js, Node.js, Redux, Tailwind CSS, Shadcn, MongoDB, Cloudinary, Express, Socket.io,Git</p>
-                <p>Developed a responsive full-stack platform for pet adoption, featuring advanced search, real-time chat, and efficient image management. Integrated Redux for state management and Google Places API for location-based recommendations, enhancing user experience.</p>
+                <a href="" target="_blank" rel="noreferrer"><img src={faceEmotion} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="" target="_blank" rel="noreferrer"><h2>Face emotion recognition</h2></a>
+                <p>Tech stack: Python, OpenCV, Tensorflow, CNN, Keras. Numpy</p>
+                <p>Developed a face emotion recognition system using computer vision and machine learning. Utilized deep learning models to detect and classify emotions in real-time from facial expressions, improving user engagement in applications like customer feedback analysis.</p>
                 
             </div>
             <div className="project">
-                <a href="https://github.com/Muskan-1003/On-Doc" target="_blank" rel="noreferrer"><img src={ondoc} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/Muskan-1003/On-Doc" target="_blank" rel="noreferrer"><h2>On-Doc</h2></a>
-                <p>Tech Stack: React.js, Node.js, Redux, Tailwind CSS, Shadcn, MongoDB, Cloudinary, Express, Socket.io, Python</p>
-                <p>Created a robust full-stack platform for managing doctor appointments with real-time communication, AI-driven diagnostics, and a responsive UI. Integrated advanced AI algorithms and Awan LLM chatbot to enhance medical decision-making and patient engagement.</p>
+                <a href="https://github.com/KhushiJaiswal09/Plantonia" target="_blank" rel="noreferrer"><img src={Plantonia} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://github.com/KhushiJaiswal09/Plantonia" target="_blank" rel="noreferrer"><h2>Plantonia</h2></a>
+                <p>Tech Stack: HTML, CSS, SCSS, JavaScript, Bootstrap, PHP, SQLite, WAMP</p>
+                <p>Created a platform for promoting environmental awareness and sustainable living. Integrated WAMP and SQLite for backend management, enabling users to share eco-friendly ideas, tips, and solutions. The platform fosters community engagement and encourages adopting sustainable practices.</p>
             </div>
             <div className="project">
-                <a href="https://github.com/Muskan-1003/Blog-App-Postgres" target="_blank" rel="noreferrer"><img src={pern} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/Muskan-1003/Blog-App-Postgres" target="_blank" rel="noreferrer"><h2>Pen&Pixel</h2></a>
-                <p>React.js,Node.js, Tailwind CSS, Shadcn, PostgresSQL, Express</p>
-                <p>Designed a comprehensive full-stack blog application utilizing PostgreSQL as the relational database. The app allows users to create, read, update, and delete blog posts, providing a seamless experience across both the backend and frontend.</p>
+                <a href="https://github.com/KhushiJaiswal09/Web-Clash/tree/main/WEB-CLASH-main" target="_blank" rel="noreferrer"><img src={Webclash} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://github.com/KhushiJaiswal09/Web-Clash/tree/main/WEB-CLASH-main" target="_blank" rel="noreferrer"><h2>Web Clash</h2></a>
+                <p>HTML, CSS, JavaScript, Bootstrap, PHP, MongoDB</p>
+                <p>Created a website development service for small businesses, providing customizable templates and affordable solutions. The platform streamlined the website creation process, enabling non-technical users to enhance their digital presence efficiently, helping businesses grow and engage with online customers.</p>
             </div>
             <div className="project">
-                <a href="https://github.com/Muskan-1003/Stock-Prediction" target="_blank" rel="noreferrer"><img src={stock} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/Muskan-1003/Stock-Prediction" target="_blank" rel="noreferrer"><h2>Stock Prediction Forecast App</h2></a>
+                <a href="https://github.com/KhushiJaiswal09/Portfolio/tree/main/Portfolio_website" target="_blank" rel="noreferrer"><img src={Portfolio} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://github.com/KhushiJaiswal09/Portfolio/tree/main/Portfolio_website" target="_blank" rel="noreferrer"><h2>Portfolio maker</h2></a>
                 <p>Tech Stack: Streamlit, Prophet, Plotly, Python.</p>
-<p>Stock price prediction Streamlit app using Prophet model for forecasting stock prices and visualizing forecasted data with Plotly in Python.</p>
+                <p>Stock price prediction Streamlit app using Prophet model for forecasting stock prices and visualizing forecasted data with Plotly in Python.</p>
             </div>
+
             <div className="project">
-                <a href="https://github.com/Muskan-1003/hand_gesture_recogniton" target="_blank" rel="noreferrer"><img src={ai} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/Muskan-1003/hand_gesture_recogniton" target="_blank" rel="noreferrer"><h2>Sign language gesture recognition</h2></a>
+                <a href="" target="_blank" rel="noreferrer"><img src={Exploryaar} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="" target="_blank" rel="noreferrer"><h2>ExplorYaar</h2></a>
+                <p>Tech Stack: React, MongoDB, AWS, </p>
+                <p>Built a travel planning platform using React, Flask, and Amazon services like SageMaker for AI, Location Service for mapping, and DynamoDB for database. Integrated AI for personalized recommendations and deployed with Docker for scalability.</p>
+            </div>
+       
+              {/* 
+                          <div className="project">
+                <a href="" target="_blank" rel="noreferrer"><img src={ai} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="" target="_blank" rel="noreferrer"><h2>Sign language gesture recognition</h2></a>
                 <p>Tech Stack: Python, TensorFlow, MediaPipe, OpenCV, NumPy, Keras</p>
                 <p>Built an ASL detector using TensorFlow, MediaPipe, and OpenCV for real-time gesture recognition, achieving over 90% accuracy. Optimized for speed, processing video input in under 30ms, to assist communication for individuals with hearing impairments.</p>
     
-            </div>
-            <div className="project">
+            </div> 
+                          <div className="project">
                 <a href="https://github.com/Muskan-1003/Expense-Tracker" target="_blank" rel="noreferrer"><img src={expense} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://github.com/Muskan-1003/Expense-Tracker" target="_blank" rel="noreferrer"><h2>Expense Tracker</h2></a>
                 <p>Tech Stack: React, Hooks, Context API.</p>
                 <p>Developed a robust expense tracker using React, hooks, and Context API for state management, enabling users to monitor daily financial transactions with real-time updates and ensuring high usability and reliability.</p>
             </div>
-            <div className="project">
-                <a href="https://github.com/Muskan-1003/snippet-manager-VS-Code-Extension" target="_blank" rel="noreferrer"><img src={vsextension} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/Muskan-1003/snippet-manager-VS-Code-Extension" target="_blank" rel="noreferrer"><h2>Snippet Manager: VScode Extension</h2></a>
-                <p>Tech Stack: JavaScript, Node.js, VS Code API</p>
-                <p>The Snippet Manager VS Code extension allows developers to create, organize, and insert custom code snippets with unique prefixes, enhancing coding efficiency within the Visual Studio Code editor.</p>
-            </div>
-       
-              {/*  <div className="project">
+              <div className="project">
                 <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><img src={mock03} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><h2>Programs of Study</h2></a>
                 <p>Designed and developed a custom component for a CMS-based platform (e.g., 'Brightspot') using Java, Handlebars, and LESS. University students can find their majors of interest through this module.</p>

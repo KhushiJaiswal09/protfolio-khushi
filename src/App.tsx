@@ -8,6 +8,8 @@ import {
   Navigation,
   Footer,
   Experience,
+  Profile,
+ 
 } from "./components";
 import FadeIn from './components/FadeIn';
 import './index.scss';
@@ -34,7 +36,8 @@ function App() {
             <Main/>
             <Expertise/>
             <Timeline/>
-            <Experience/>
+            <Experience/> 
+              <Profile/>     
             <Project/>
             <Contact/>
         </FadeIn>
