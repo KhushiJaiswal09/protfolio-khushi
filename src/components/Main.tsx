@@ -18,7 +18,7 @@ function Main() {
           <div className="social_icons">
             <a href="https://github.com/KhushiJaiswal09" target="_blank" rel="noreferrer"><GitHubIcon /></a>
             <a href="https://www.linkedin.com/in/khushijaiswal09/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
-            <a href="https://drive.google.com/file/d/1gmNjGC_Lo2zEBLYLRjxAJ4nP4Ne-Kz8t/view?usp=sharing" target="_blank" rel="noreferrer">
+            <a href="https://drive.google.com/file/d/1nDY6eGwnUfgGpHD9EWCOTjPZI8GdcZav/view?usp=sharing" target="_blank" rel="noreferrer">
               <FaDownload className="small-icon" />
             </a>
 
