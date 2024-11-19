@@ -13,7 +13,7 @@ function Expertise() {
                 <h1>Coding Profiles</h1>
                 <div className="skills-grid">
 
-                    <a href="https://leetcode.com/u/KhushiJaiswal0909/" target="_blank" rel="noreferrer">
+                    <a href="https://leetcode.com/u/KhushiJaiswal09/" target="_blank" rel="noreferrer">
                         <div className="profile">
                             <FontAwesomeIcon icon={faJava} size="3x"/>
                             <h3>LeetCode</h3>
