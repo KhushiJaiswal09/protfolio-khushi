@@ -58,7 +58,7 @@ const Contact: React.FC = () => {
                 required
                 id="email"
                 name="email"
-                label="Email / Phone"
+                label="Email"
                 placeholder="How can I reach you?"
                 value={formDetails.email}
                 onChange={handleChange}
