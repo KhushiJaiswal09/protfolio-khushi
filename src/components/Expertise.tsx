@@ -1,82 +1,64 @@
 import React from "react";
-import '@fortawesome/free-regular-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faJava } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase } from '@fortawesome/free-solid-svg-icons'; 
-import Chip from '@mui/material/Chip';
-import '../assets/styles/Expertise.scss';
+import {
+    faCode,
+    faDatabase,
+    faScrewdriverWrench,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../assets/styles/Expertise.scss";
 
-const labelsFirst = [
-    "React",
-    "JavaScript",
-    "HTML5",
-    "CSS3",
-    "Tailwind CSS",
-    "Next",
-];
-
-const labelsSecond = [
-    "Node.js",
-    "Express.js",
-    "Python",
-    "MongoDB",
-    "MySQL",
-    "Git",
-    "AWS",
-    
-];
-
-const labelsThird = [
-    "Java",
-    "JDBC",
-    "Object Oriented Programming Concepts",
-    
+const skillGroups = [
+    {
+        number: "01",
+        icon: faCode,
+        title: "Frontend",
+        description: "Building responsive, accessible interfaces for enterprise applications.",
+        technologies: ["Angular", "React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Bootstrap"],
+    },
+    {
+        number: "02",
+        icon: faDatabase,
+        title: "Backend",
+        description: "Developing APIs and distributed services for dependable document workflows.",
+        technologies: ["C#", "Java", "Python", "SQL", "ASP.NET Core", "Microservices", "REST APIs", "RabbitMQ", "Serilog", "PostgreSQL"],
+    },
+    {
+        number: "03",
+        icon: faScrewdriverWrench,
+        title: "Tools & Technologies",
+        description: "Supporting deployments, automated document processing, and collaborative delivery.",
+        technologies: ["Kubernetes", "Docker", "Git", "CI/CD", "Swagger", "OpenCV", "OCR", "Named Entity Recognition (NER)", "Event-Driven Architecture"],
+    },
 ];
 
 function Expertise() {
     return (
-    <div className="container" id="expertise">
-        <div className="skills-container">
-            <h1>Expertise</h1>
-            <div className="skills-grid">
-                <div className="skill">
-                    <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>FrontEnd Development</h3>
-                    <p>I have expertise in building diverse web applications from scratch using modern technologies. My experience spans across the entire Software Development Life Cycle (SDLC), with strong proficiency in both frontend and backend development.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsFirst.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
+        <section className="expertise-section" id="expertise">
+            <div className="section-inner">
+                <div className="section-heading">
+                    <p className="section-eyebrow">HOW I BUILD</p>
+                    <h2>Technical Expertise</h2>
+                    <p>Core technologies and tools from my experience and résumé.</p>
                 </div>
-
-                <div className="skill">
-                <FontAwesomeIcon icon={faDatabase}  size="3x"/>
-                    <h3>Backend Development</h3>
-                    <p>Backend developer with a knack for designing scalable systems and optimizing APIs. I specialize in creating seamless, high-performance server-side applications and managing complex databases, ensuring smooth and efficient operations.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsSecond.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
-
-                <div className="skill">
-                    <FontAwesomeIcon icon={faJava} size="3x"/>
-                    <h3>Java</h3>
-                    <p>Proficient in Java with a strong focus on OOP and DSA. I excel at writing clean, efficient code and developing robust applications. My expertise includes advanced OOP, multithreading, and database management with JDBC.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsThird.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
+                <div className="expertise-grid">
+                    {skillGroups.map((group) => (
+                        <article className="expertise-card" key={group.title}>
+                            <div className="expertise-card-top">
+                                <span className="expertise-number">{group.number}</span>
+                                <FontAwesomeIcon icon={group.icon} aria-hidden="true" />
+                            </div>
+                            <h3>{group.title}</h3>
+                            <p className="expertise-description">{group.description}</p>
+                            <ul className="expertise-tags" aria-label={`${group.title} technologies`}>
+                                {group.technologies.map((technology) => (
+                                    <li key={technology}>{technology}</li>
+                                ))}
+                            </ul>
+                        </article>
+                    ))}
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
     );
 }
 

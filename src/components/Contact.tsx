@@ -26,11 +26,18 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div id="contact">
-      <div className="items-container">
+    <section className="contact-section" id="contact">
+      <div className="contact-inner">
         <div className="contact_wrapper">
-          <h1>Contact Me</h1>
-          <p>Got a project waiting to be realized? Let's collaborate and make it happen!</p>
+          <div className="section-heading">
+            <p className="section-eyebrow">LET’S CONNECT</p>
+            <h2>Have something in mind?</h2>
+            <p>For opportunities, collaborations, or questions, get in touch.</p>
+          </div>
+          <div className="contact-details">
+            <a href="mailto:jaiswalkhushi677@gmail.com">jaiswalkhushi677@gmail.com</a>
+            <a href="tel:+919415053377">+91 94150 53377</a>
+          </div>
           <form
             method="POST"
             action="https://formspree.io/f/maeqpdaw"
@@ -48,16 +55,17 @@ const Contact: React.FC = () => {
                 variant="outlined"
                 margin="normal"
                 InputProps={{
-                  style: { color: '#000' } // Set text color to black
+                  style: { color: 'var(--text)' }
                 }}
                 InputLabelProps={{
-                  style: { color: '#000' } // Set label color to black
+                  style: { color: 'var(--muted)' }
                 }}
               />
               <TextField
                 required
                 id="email"
                 name="email"
+                type="email"
                 label="Email"
                 placeholder="How can I reach you?"
                 value={formDetails.email}
@@ -65,10 +73,10 @@ const Contact: React.FC = () => {
                 variant="outlined"
                 margin="normal"
                 InputProps={{
-                  style: { color: '#000' } // Set text color to black
+                  style: { color: 'var(--text)' }
                 }}
                 InputLabelProps={{
-                  style: { color: '#000' } // Set label color to black
+                  style: { color: 'var(--muted)' }
                 }}
               />
             </div>
@@ -85,10 +93,10 @@ const Contact: React.FC = () => {
               variant="outlined"
               margin="normal"
               InputProps={{
-                style: { color: '#000' } // Set text color to black
+                style: { color: 'var(--text)' }
               }}
               InputLabelProps={{
-                style: { color: '#000' } // Set label color to black
+                style: { color: 'var(--muted)' }
               }}
               className="body-form"
             />
@@ -102,7 +110,7 @@ const Contact: React.FC = () => {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,49 +1,53 @@
 import React from "react";
-import '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faJava } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase } from '@fortawesome/free-solid-svg-icons'; 
-import Chip from '@mui/material/Chip';
-import '../assets/styles/Profile.scss';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 
-function Expertise() {
+const profiles = [
+    {
+        name: "GitHub",
+        description: "Browse my software projects and contributions.",
+        linkText: "Explore my repositories",
+        href: "https://github.com/KhushiJaiswal09",
+        icon: faGithub,
+    },
+    {
+        name: "LeetCode",
+        description: "243+ problems solved across easy, medium, and hard challenges.",
+        linkText: "View my solutions",
+        href: "https://leetcode.com/u/KhushiJaiswal09/",
+        icon: faCode,
+    },
+];
+
+function Profile() {
     return (
-        <div className="container" id="coding">
+        <section className="container" id="coding">
             <div className="skills-container">
-                <h1>Coding Profiles</h1>
+                <div className="section-heading">
+                    <p className="section-eyebrow">OUTSIDE THE DAY JOB</p>
+                    <h2>Coding Profiles</h2>
+                </div>
                 <div className="skills-grid">
-
-                    <a href="https://leetcode.com/u/KhushiJaiswal09/" target="_blank" rel="noreferrer">
-                        <div className="profile">
-                            <FontAwesomeIcon icon={faJava} size="3x"/>
-                            <h3>LeetCode</h3>
-                            <p>Secured a global rank of less than 420,000, reflecting my continuous dedication in DSA, coding problem-solving abilities, and competitive programming experience.</p>
-                            <p>Click here to visit :)</p>
-                        </div>
-                    </a>
-
-                    <a href="https://www.geeksforgeeks.org/user/jaiswalkhushi677/" target="_blank" rel="noreferrer">
-                        <div className="profile">
-                            <FontAwesomeIcon icon={faDatabase} size="3x"/>
-                            <h3>Geeks for Geeks</h3>
-                            <p>I hold a rank of around 700 on GFG in my college, reflecting my consistent efforts in DSA, coding problem-solving, and competitive programming.</p>
-                            <p>Click here to visit :)</p>
-                        </div>
-                    </a>
-
-                    <a href="https://github.com/KhushiJaiswal09" target="_blank" rel="noreferrer">
-                        <div className="profile">
-                            <FontAwesomeIcon icon={faJava} size="3x"/>
-                            <h3>Github</h3>
-                            <p>Here is a vibrant showcase of projects, highlighting my dedication to coding consistency, creative problem-solving, and continuous growth in software development.</p>
-                            <p>Click here to visit :)</p>
-                        </div>
-                    </a>
-
+                    {profiles.map((profile) => (
+                        <a
+                            href={profile.href}
+                            target="_blank"
+                            rel="noreferrer"
+                            key={profile.name}
+                        >
+                            <div className="profile">
+                                <FontAwesomeIcon icon={profile.icon} aria-hidden="true" />
+                                <h3>{profile.name}</h3>
+                                <p>{profile.description}</p>
+                                <p>{profile.linkText} <span aria-hidden="true">↗</span></p>
+                            </div>
+                        </a>
+                    ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
-export default Expertise;
+export default Profile;

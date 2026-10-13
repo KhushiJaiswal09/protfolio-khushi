@@ -1,89 +1,154 @@
 import React from "react";
-import faceEmotion from "../assets/images/faceEmotion.jpg"
-import ondoc from "../assets/images/ondoc.png"
-import stock from "../assets/images/stock1.png"
-import pern from "../assets/images/pernmock1.png"
-import ai from "../assets/images/ai.png"
-import expense from "../assets/images/expense.png"
-// import notion from "../assets/images/notion.png"
-import vsextension from "../assets/images/vsextension.png"
-import Exploryaar from "../assets/images/Exploryaar.jpg"
-import Plantonia from "../assets/images/Plantonia.jpg"
-import Webclash from "../assets/images/Webclash.jpg"
-import Portfolio from "../assets/images/Portfolio.jpg"
+import faceEmotion from "../assets/images/faceEmotion.jpg";
+import srgpWebsite from "../assets/images/srgp-website.jpg";
+import srgpComputerLab from "../assets/images/srgp-computer-lab.jpg";
+import plantonia from "../assets/images/Plantonia.jpg";
+import webClash from "../assets/images/Webclash.jpg";
+import "../assets/styles/Project.scss";
 
+interface ProjectDetails {
+    title: string;
+    category: string;
+    description: string;
+    technologies: string[];
+    highlights?: string[];
+    image?: string;
+    images?: { src: string; alt: string }[];
+    href?: string;
+    visual?: "health";
+}
 
-import '../assets/styles/Project.scss';
+const projects: ProjectDetails[] = [
+    {
+        title: "SRGP Institutional Web Platform",
+        category: "Production website",
+        description: "Built and deployed an institutional website from scratch, with 20+ responsive routes for admissions, academics, campus facilities, and student enquiries.",
+        technologies: ["React", "TypeScript", "React Router", "Formspree"],
+        highlights: ["20+ client-side routes", "Responsive page layouts", "Admissions & academic information"],
+        images: [
+            { src: srgpWebsite, alt: "SRGP Pharmacy College website homepage" },
+            { src: srgpComputerLab, alt: "Computer lab featured on the SRGP College website" },
+        ],
+        href: "http://srgp.in/",
+    },
+    {
+        title: "BP Monitoring Dashboard",
+        category: "Health tracking application",
+        description: "Developed a responsive application for recording blood-pressure readings and reviewing timestamped measurement history.",
+        technologies: ["React", "TypeScript", "React Hooks", "Local Storage"],
+        visual: "health",
+    },
+    {
+        title: "Face Emotion Recognition",
+        category: "Machine learning",
+        description: "Built a real-time facial-expression recognition system that detects faces and classifies emotions from video input.",
+        technologies: ["Python", "OpenCV", "TensorFlow", "CNN", "Keras", "NumPy"],
+        image: faceEmotion,
+    },
+    {
+        title: "Plantonia",
+        category: "Sustainable living",
+        description: "Created a platform for environmental awareness and sustainable living, where users can share eco-friendly ideas, tips, and solutions.",
+        technologies: ["HTML", "CSS", "SCSS", "JavaScript", "Bootstrap", "PHP", "SQLite", "WAMP"],
+        image: plantonia,
+        href: "https://github.com/KhushiJaiswal09/Plantonia",
+    },
+    {
+        title: "Web Clash",
+        category: "Web development service",
+        description: "Developed a website service offering customizable templates and affordable solutions to help small businesses grow their online presence.",
+        technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MongoDB"],
+        image: webClash,
+        href: "https://github.com/KhushiJaiswal09/Web-Clash/tree/main/WEB-CLASH-main",
+    },
+];
 
 function Project() {
-    return(
-    <div className="projects-container" id="projects">
-        <h1>Personal Projects</h1>
-        <div className="projects-grid">
-            <div className="project">
-                <a href="" target="_blank" rel="noreferrer"><img src={faceEmotion} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="" target="_blank" rel="noreferrer"><h2>Face emotion recognition</h2></a>
-                <p>Tech stack: Python, OpenCV, Tensorflow, CNN, Keras. Numpy</p>
-                <p>Developed a face emotion recognition system using computer vision and machine learning. Utilized deep learning models to detect and classify emotions in real-time from facial expressions, improving user engagement in applications like customer feedback analysis.</p>
-                
+    return (
+        <section className="projects-container" id="projects">
+            <div className="section-inner">
+                <div className="section-heading">
+                    <p className="section-eyebrow">A FEW THINGS I’VE BUILT</p>
+                    <h2>Selected Projects</h2>
+                    <p>Production work, recent builds, and projects I’ve developed along the way.</p>
+                </div>
+                <div className="projects-grid">
+                    {projects.map((project) => (
+                        <article className="project-card" key={project.title}>
+                            <div className="project-art">
+                                {project.images ? (
+                                    <div className="project-image-pair">
+                                        {project.images.map((image) => (
+                                            <img src={image.src} alt={image.alt} key={image.alt} />
+                                        ))}
+                                    </div>
+                                ) : project.image ? (
+                                    <div className="project-image-single">
+                                        <img
+                                            src={project.image}
+                                            alt={`${project.title} project preview`}
+                                        />
+                                    </div>
+                                ) : (
+                                    <div
+                                        className={`project-illustration project-illustration--${project.visual}`}
+                                        aria-hidden="true"
+                                    >
+                                        <div className="mock-window">
+                                            <div className="mock-toolbar">
+                                                <span />
+                                                <span />
+                                                <span />
+                                                <i />
+                                            </div>
+                                            <div className="mock-health">
+                                                <span className="mock-kicker">YOUR HEALTH OVER TIME</span>
+                                                <strong>Blood pressure</strong>
+                                                <div className="mock-reading"><b>118</b><span>/</span><b>76</b><small>mmHg</small></div>
+                                                <div className="mock-chart"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                            <div className="project-details">
+                                <div className="project-meta">
+                                    <span className="project-category">{project.category}</span>
+                                </div>
+                                <h3>{project.title}</h3>
+                                <p>{project.description}</p>
+                                {project.highlights && (
+                                    <ul className="project-highlights" aria-label={`${project.title} features`}>
+                                        {project.highlights.map((highlight) => (
+                                            <li key={highlight}>{highlight}</li>
+                                        ))}
+                                    </ul>
+                                )}
+                                <ul className="project-technologies" aria-label={`${project.title} technologies`}>
+                                    {project.technologies.map((technology) => (
+                                        <li key={technology}>{technology}</li>
+                                    ))}
+                                </ul>
+                                {project.href && (
+                                    <a
+                                        className="project-source-link"
+                                        href={project.href}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        aria-label={project.href === "http://srgp.in/"
+                                            ? "View SRGP Institutional Web Platform website"
+                                            : `View ${project.title} on GitHub`}
+                                    >
+                                        {project.href === "http://srgp.in/" ? "Visit live website" : "View on GitHub"}
+                                        {" "}<span aria-hidden="true">↗</span>
+                                    </a>
+                                )}
+                            </div>
+                        </article>
+                    ))}
+                </div>
             </div>
-            <div className="project">
-                <a href="https://github.com/KhushiJaiswal09/Plantonia" target="_blank" rel="noreferrer"><img src={Plantonia} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/KhushiJaiswal09/Plantonia" target="_blank" rel="noreferrer"><h2>Plantonia</h2></a>
-                <p>Tech Stack: HTML, CSS, SCSS, JavaScript, Bootstrap, PHP, SQLite, WAMP</p>
-                <p>Created a platform for promoting environmental awareness and sustainable living. Integrated WAMP and SQLite for backend management, enabling users to share eco-friendly ideas, tips, and solutions. The platform fosters community engagement and encourages adopting sustainable practices.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/KhushiJaiswal09/Web-Clash/tree/main/WEB-CLASH-main" target="_blank" rel="noreferrer"><img src={Webclash} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/KhushiJaiswal09/Web-Clash/tree/main/WEB-CLASH-main" target="_blank" rel="noreferrer"><h2>Web Clash</h2></a>
-                <p>HTML, CSS, JavaScript, Bootstrap, PHP, MongoDB</p>
-                <p>Created a website development service for small businesses, providing customizable templates and affordable solutions. The platform streamlined the website creation process, enabling non-technical users to enhance their digital presence efficiently, helping businesses grow and engage with online customers.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/KhushiJaiswal09/Portfolio/tree/main/Portfolio_website" target="_blank" rel="noreferrer"><img src={Portfolio} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/KhushiJaiswal09/Portfolio/tree/main/Portfolio_website" target="_blank" rel="noreferrer"><h2>Portfolio maker</h2></a>
-                <p>Tech Stack: Streamlit, Prophet, Plotly, Python.</p>
-                <p>Stock price prediction Streamlit app using Prophet model for forecasting stock prices and visualizing forecasted data with Plotly in Python.</p>
-            </div>
-
-            <div className="project">
-                <a href="" target="_blank" rel="noreferrer"><img src={Exploryaar} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="" target="_blank" rel="noreferrer"><h2>ExplorYaar</h2></a>
-                <p>Tech Stack: React, MongoDB, AWS, </p>
-                <p>Built a travel planning platform using React, Flask, and Amazon services like SageMaker for AI, Location Service for mapping, and DynamoDB for database. Integrated AI for personalized recommendations and deployed with Docker for scalability.</p>
-            </div>
-       
-              {/* 
-                          <div className="project">
-                <a href="" target="_blank" rel="noreferrer"><img src={ai} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="" target="_blank" rel="noreferrer"><h2>Sign language gesture recognition</h2></a>
-                <p>Tech Stack: Python, TensorFlow, MediaPipe, OpenCV, NumPy, Keras</p>
-                <p>Built an ASL detector using TensorFlow, MediaPipe, and OpenCV for real-time gesture recognition, achieving over 90% accuracy. Optimized for speed, processing video input in under 30ms, to assist communication for individuals with hearing impairments.</p>
-    
-            </div> 
-                          <div className="project">
-                <a href="https://github.com/Muskan-1003/Expense-Tracker" target="_blank" rel="noreferrer"><img src={expense} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/Muskan-1003/Expense-Tracker" target="_blank" rel="noreferrer"><h2>Expense Tracker</h2></a>
-                <p>Tech Stack: React, Hooks, Context API.</p>
-                <p>Developed a robust expense tracker using React, hooks, and Context API for state management, enabling users to monitor daily financial transactions with real-time updates and ensuring high usability and reliability.</p>
-            </div>
-              <div className="project">
-                <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><img src={mock03} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><h2>Programs of Study</h2></a>
-                <p>Designed and developed a custom component for a CMS-based platform (e.g., 'Brightspot') using Java, Handlebars, and LESS. University students can find their majors of interest through this module.</p>
-            </div>
-            <div className="project">
-                <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><img src={mock02} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><h2>Transfer Evaluation Matrix</h2></a>
-                <p>Created an interactive CSV table generator with Java, Handlebars, and LESS. This project helps transfer students to quickly identify eligible credits.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/yujisatojr/submeowrine" target="_blank" rel="noreferrer"><img src={mock01} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/yujisatojr/submeowrine" target="_blank" rel="noreferrer"><h2>Submeowrine</h2></a>
-                <p>Developed and released an Android mobile application using Java and Android Studio that runs a 2D shooting game.</p>
-            </div> */}
-        </div>
-    </div>
+        </section>
     );
 }
 

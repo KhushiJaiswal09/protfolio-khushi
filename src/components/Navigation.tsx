@@ -17,11 +17,22 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 
 const drawerWidth = 240;
-const navItems = [['Expertise', 'expertise'], ['Education', 'education'],['Experience', 'experience'],['Coding Profiles', 'coding'], ['Projects', 'projects'], ['Contact', 'contact']];
+const navItems: [string, string][] = [
+  ['Experience', 'experience'],
+  ['Expertise', 'expertise'],
+  ['Projects', 'projects'],
+  ['Education', 'education'],
+  ['Coding Profiles', 'coding'],
+  ['Contact', 'contact'],
+];
 
-function Navigation({parentToChild, modeChange}: any) {
+interface NavigationProps {
+  parentToChild: { mode: 'dark' | 'light' };
+  modeChange: () => void;
+}
 
-  const {mode} = parentToChild;
+function Navigation({ parentToChild, modeChange }: NavigationProps) {
+  const { mode } = parentToChild;
 
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -47,13 +58,11 @@ function Navigation({parentToChild, modeChange}: any) {
   }, []);
 
   const scrollToSection = (section: string) => {
-    console.log(section)
-    const expertiseElement = document.getElementById(section);
-    if (expertiseElement) {
-      expertiseElement.scrollIntoView({ behavior: 'smooth' });
-      console.log('Scrolling to:', expertiseElement);  // Debugging: Ensure the element is found
+    const sectionElement = document.getElementById(section);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: 'smooth' });
     } else {
-      console.error('Element with id "expertise" not found');  // Debugging: Log error if element is not found
+      console.error(`Element with id "${section}" not found`);
     }
   };
 
@@ -87,18 +96,25 @@ function Navigation({parentToChild, modeChange}: any) {
           >
             <MenuIcon />
           </IconButton>
-          {mode === 'dark' ? (
-            <LightModeIcon onClick={() => modeChange()}/>
-          ) : (
-            <DarkModeIcon onClick={() => modeChange()}/>
-          )}
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <a className="nav-brand" href="#home" aria-label="Khushi Jaiswal, home">
+            <span aria-hidden="true">K</span>
+            Khushi Jaiswal
+          </a>
+          <Box className="nav-links">
             {navItems.map((item) => (
-              <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: '#fff' }}>
+              <Button key={item[0]} onClick={() => scrollToSection(item[1])}>
                 {item[0]}
               </Button>
             ))}
           </Box>
+          <IconButton
+            className="nav-theme"
+            color="inherit"
+            aria-label={`Switch to ${mode === 'dark' ? 'light' : 'dark'} mode`}
+            onClick={modeChange}
+          >
+            {mode === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
+          </IconButton>
         </Toolbar>
       </AppBar>
       <nav>

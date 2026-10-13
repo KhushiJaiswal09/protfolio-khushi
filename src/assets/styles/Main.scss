@@ -1,160 +1,281 @@
-.dark-mode .about-section {
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.about-section {
-    display: flex;
-    gap: 30px;
-    justify-content: flex-start;
+.hero-section {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.78fr);
     align-items: center;
-    width: 100%;
-    padding: 0px 15%;
-    min-height: 700px;
-    background-image: url("../images/bg-dark.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    gap: clamp(48px, 8vw, 112px);
+    max-width: 1280px;
+    min-height: min(780px, calc(100svh - 64px));
+    margin: 0 auto;
+    padding: 112px 8% 96px;
 }
 
-.small-icon {
-    font-size: 25px !important;
+.hero-section::before {
+    position: absolute;
+    z-index: -1;
+    top: 11%;
+    right: 2%;
+    width: 390px;
+    height: 390px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(124, 92, 252, 0.19), transparent 70%);
+    content: "";
+    pointer-events: none;
 }
 
+.hero-content {
+    min-width: 0;
+}
 
-.about-section .content {
-    text-align: left;
-    z-index: 2;
+.hero-eyebrow,
+.hero-card-label,
+.hero-card-caption,
+.hero-company {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+}
 
-    .social_icons {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        color: white;
+.availability-dot {
+    width: 9px;
+    height: 9px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background-color: var(--accent);
+    box-shadow: 0 0 14px rgba(165, 145, 255, 0.55);
+}
 
-        svg {
-            font-size: 1.8em;
-        }
+.hero-content h1 {
+    margin: 22px 0 14px;
+    font-size: clamp(3.6rem, 6vw, 5.7rem);
+    font-weight: 800;
+    letter-spacing: -0.075em;
+    line-height: 0.99;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: var(--accent);
+}
+
+.hero-content .hero-role {
+    margin: 25px 0 0;
+    font-size: clamp(1.15rem, 2vw, 1.55rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+
+.hero-content .hero-summary {
+    max-width: 620px;
+    margin: 19px 0 0;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 31px;
+}
+
+.hero-button {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 0 18px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 0.93rem;
+    font-weight: 700;
+    transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-2px);
+    color: var(--text);
+}
+
+.hero-button--primary {
+    background: var(--accent);
+    color: #111018;
+}
+
+.hero-button--primary:hover {
+    background: var(--accent-strong);
+    color: #111018;
+}
+
+.hero-button--secondary {
+    border-color: var(--border);
+    background: var(--surface);
+    color: var(--text);
+}
+
+.hero-button--secondary:hover {
+    border-color: var(--accent);
+    background: var(--surface-hover);
+}
+
+.hero-button svg {
+    font-size: 0.9rem;
+}
+
+.hero-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 21px;
+    margin-top: 28px;
+}
+
+.hero-socials a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.hero-socials a:hover {
+    color: var(--accent);
+}
+
+.hero-socials svg {
+    width: 20px;
+    height: 20px;
+}
+
+.hero-card {
+    padding: clamp(22px, 3vw, 34px);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: linear-gradient(145deg, var(--surface), var(--surface-raised));
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.18);
+}
+
+.hero-card-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.hero-card-top img {
+    width: 72px;
+    height: 72px;
+    flex: 0 0 auto;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.hero-card-top > div {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hero-card-label {
+    font-size: 0.65rem;
+}
+
+.hero-card-top strong {
+    color: var(--text);
+    font-size: 1.07rem;
+}
+
+.hero-company {
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.hero-card-divider {
+    height: 1px;
+    margin: 26px 0 20px;
+    background: var(--border);
+}
+
+.hero-card .hero-card-caption {
+    margin: 0 0 17px;
+    font-size: 0.68rem;
+}
+
+.hero-stats {
+    display: grid;
+    gap: 14px;
+}
+
+.hero-stats > div {
+    display: grid;
+    grid-template-columns: 62px minmax(0, 1fr);
+    align-items: baseline;
+    gap: 12px;
+}
+
+.hero-stats strong {
+    color: var(--accent);
+    font-size: 1.45rem;
+    letter-spacing: -0.05em;
+}
+
+.hero-stats span {
+    color: var(--muted);
+    font-size: 0.87rem;
+}
+
+.light-mode .hero-section::before {
+    background: radial-gradient(circle, rgba(124, 92, 252, 0.12), transparent 70%);
+}
+
+@media (max-width: 860px) {
+    .hero-section {
+        grid-template-columns: minmax(0, 1.1fr) minmax(255px, 0.9fr);
+        gap: 35px;
+        padding-right: 6%;
+        padding-left: 6%;
     }
 
-    .mobile_social_icons {
-        display: none;
-    }
-
-    p {
-        font-size: 1.5em;
-        margin-block-start: 0px;
-        margin-block-end: 0px;
-    }
-
-    h1 {
-        font-size: 5em;
-        margin-block-start: 0px;
-        margin-block-end: 0px;
+    .hero-content h1 {
+        font-size: clamp(3.35rem, 8vw, 5rem);
     }
 }
 
-.about-section .image-wrapper {
-    z-index: 2;
-    img {
-        width: 150px;
-        border-radius: 50%;
+@media (max-width: 640px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+        gap: 37px;
+        min-height: auto;
+        padding: 82px 6% 72px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(3.5rem, 15vw, 5.2rem);
+    }
+
+    .hero-section::before {
+        top: 4%;
+        right: 0;
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero-card {
+        max-width: 440px;
     }
 }
 
-.about p {
-    text-align: center;
-    padding-top: 30%;
-    padding-bottom: 30%;
-}
-
-@media screen {
-    @media (max-width: 567px) {
-        .nav-left {
-            padding-top: 20px;
-            float: left;
-        }
-
-        .nav-left img {
-            height: 35px;
-        }
-
-        .nav-right {
-            float: right;
-        }
-
-        .nav-right li {
-            padding: 10px 15px;
-            list-style: none;
-            font-size: 13px;
-            color: white;
-            width: 10%;
-        }
-
-        .nav-right ul {
-            list-style-type: none;
-            margin: 0px;
-            padding: 0px;
-        }
-
-        body {
-            width: 100%;
-        }
-
-        .about {
-            padding-left: 5%;
-            padding-right: 5%;
-            font-size: 12px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .about-section h1 {
-            font-size: 4em !important;
-            text-align: left;
-        }
-
-        .about-section p {
-            text-align: left;
-        }
-
-        .container {
-            display: initial;
-        }
-
-        .social_icons {
-            display: none !important;
-        }
-
-        .mobile_social_icons {
-            padding-top: 10px;
-            display: flex !important;
-            flex-direction: row;
-            gap: 10px;
-            color: white;
-
-            svg {
-                font-size: 1.8em;
-            }
-        }
-
-        .about-section {
-            padding-top: 150px;
-            display: block;
-            padding-left: 0px;
-            padding-right: 0px;
-        }
-
-        .about-section .content {
-            width: 90%;
-            padding-left: 5%;
-            padding-right: 5%;
-            padding-bottom: 5%;
-        }
-
-        .about-section .image-wrapper {
-            padding-left: 5%;
-            width: 100%;
-        }
+@media (prefers-reduced-motion: reduce) {
+    .hero-button {
+        transition: none;
     }
 }

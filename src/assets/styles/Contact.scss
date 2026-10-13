@@ -1,59 +1,104 @@
-.contact_wrapper {
-  .contact-form {
-    padding-top: 20px;
-
-    button {
-      float: right;
-      background-color: white;
-      color: #050f0b;
-      &:hover {
-        background-color: #5000ca;
-        color: white;
-      }
-    }
-
-    // Remove or adjust the fieldset background if necessary
-    // fieldset {
-    //   border: none; // Removes the border and background color
-    // }
-  }
+.contact-section {
+    padding: 77px 0 88px;
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    scroll-margin-top: 82px;
 }
 
-#name,
-#email,
-#message {
-  background-color: white; // Ensure background color is set to white
-  width: 100%; // Ensure full-width for alignment
+.contact-inner {
+    width: min(100% - 12%, 790px);
+    margin: 0 auto;
 }
 
-.form-flex {
-  display: flex;
-  gap: 15px;
-  padding-bottom: 15px;
+.contact_wrapper .section-heading {
+    margin-bottom: 17px;
+}
 
-  .MuiFormControl-root {
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 14px;
+}
+
+.contact-details a {
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.contact-details a:hover {
+    color: var(--accent-strong);
+}
+
+.contact_wrapper .contact-form {
+    padding-top: 9px;
+}
+
+.contact-form .form-flex {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-form .MuiFormControl-root {
     width: 100%;
-
-    // Adjustments to ensure text and label colors are black
-    .MuiInputBase-root {
-      color: #000; // Text color
-    }
-
-    .MuiFormLabel-root {
-      color: #000; // Label color
-    }
-  }
+    margin: 10px 0;
 }
 
-.body-form {
-  width: 100% !important;
-  margin-bottom: 15px !important;
+.contact-form .MuiInputBase-root {
+    border-radius: 8px;
+    background: var(--surface-raised);
+    color: var(--text);
+}
 
-  .MuiInputBase-root {
-    color: #000; // Text color
-  }
+.contact-form .MuiOutlinedInput-notchedOutline {
+    border-color: var(--border);
+}
 
-  .MuiFormLabel-root {
-    color: #000; // Label color
-  }
+.contact-form .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: var(--muted);
+}
+
+.contact-form .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: var(--accent);
+}
+
+.contact-form .MuiInputLabel-root.Mui-focused {
+    color: var(--accent);
+}
+
+.contact-form .body-form {
+    width: 100%;
+    margin: 0 0 14px;
+}
+
+.contact_wrapper .contact-form button {
+    min-height: 44px;
+    float: right;
+    padding: 0 20px;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #111018;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-transform: none;
+}
+
+.contact_wrapper .contact-form button:hover {
+    background: var(--accent-strong);
+}
+
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 62px 0 70px;
+    }
+
+    .contact-inner {
+        width: min(100% - 10%, 790px);
+    }
+
+    .contact-form .form-flex {
+        flex-direction: column;
+        gap: 0;
+    }
 }
