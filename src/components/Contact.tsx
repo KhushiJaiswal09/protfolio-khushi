@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
           <p>Got a project waiting to be realized? Let's collaborate and make it happen!</p>
           <form
             method="POST"
-            action="https://formspree.io/f/mjvnqvla"
+            action="https://formspree.io/f/maeqpdaw"
             className="contact-form"
           >
             <div className="form-flex">
