@@ -36,7 +36,6 @@ const Contact: React.FC = () => {
           </div>
           <div className="contact-details">
             <a href="mailto:jaiswalkhushi677@gmail.com">jaiswalkhushi677@gmail.com</a>
-            <a href="tel:+919415053377">+91 94150 53377</a>
           </div>
           <form
             method="POST"
