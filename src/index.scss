@@ -223,6 +223,13 @@ button {
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--surface);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.personal-details-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .personal-details-card .section-eyebrow {
@@ -420,7 +427,13 @@ footer p {
   }
 
   .main-container,
+  .personal-details-card,
   .skills-container .skills-grid > a {
     transition: none;
+  }
+
+  .personal-details-card:hover {
+    transform: none;
+    box-shadow: none;
   }
 }

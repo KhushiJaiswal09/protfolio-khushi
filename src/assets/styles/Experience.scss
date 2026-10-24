@@ -57,6 +57,13 @@
     border: 1px solid var(--border);
     border-radius: 13px;
     background: var(--surface-raised);
+    transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.experience-company:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .company-mark {
@@ -114,6 +121,23 @@
 
 .experience-role:last-child {
     padding-bottom: 0;
+}
+
+.experience-role .role-dot {
+    transition: box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.experience-role:hover .role-dot {
+    background: var(--accent);
+    box-shadow: 0 0 0 5px var(--tag), 0 0 14px var(--accent);
+}
+
+.experience-role:hover .role-heading h3 {
+    color: var(--accent);
+}
+
+.role-heading h3 {
+    transition: color 180ms ease;
 }
 
 .role-period {
@@ -190,5 +214,18 @@
 
     .role-dot {
         left: -31px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .experience-company,
+    .experience-role .role-dot,
+    .role-heading h3 {
+        transition: none;
+    }
+
+    .experience-company:hover {
+        transform: none;
+        box-shadow: none;
     }
 }
