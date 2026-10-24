@@ -31,8 +31,8 @@ function Main() {
           </a>
           <a
             className="hero-button hero-button--secondary"
-            href="/Khushi-Jaiswal.pdf"
-            download="Khushi-Jaiswal-Resume.pdf"
+            href="/KhushiJaiswal.pdf"
+            download="KhushiJaiswal.pdf"
           >
             <FaDownload aria-hidden="true" />
             Download résumé
