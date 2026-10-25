@@ -11,6 +11,20 @@ test('switches to light mode from the navigation control', () => {
   expect(screen.getByRole('button', { name: 'Switch to dark mode' })).toBeInTheDocument();
 });
 
+test('shows the Pulse app and source links', () => {
+  render(<App />);
+
+  expect(screen.getByText(/full-stack blood-pressure journal/i)).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: 'View Pulse on GitHub' })).toHaveAttribute(
+    'href',
+    'https://github.com/KhushiJaiswal09/BP-Monitoring-setup/tree/main/bp-monitoring'
+  );
+  expect(screen.getByRole('link', { name: 'Visit Pulse live website' })).toHaveAttribute(
+    'href',
+    'https://bp-monitoring-setup.vercel.app/'
+  );
+});
+
 test('shows the current professional profile and downloadable résumé', () => {
   render(<App />);
   expect(screen.getByRole('heading', { name: /Hi, I’m Khushi Jaiswal/ })).toBeInTheDocument();
@@ -34,7 +48,7 @@ test('shows the current professional profile and downloadable résumé', () => {
 
   [
     'SRGP Institutional Web Platform',
-    'BP Monitoring Dashboard',
+    'Pulse',
     'Face Emotion Recognition',
     'Plantonia',
     'Web Clash',

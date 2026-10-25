@@ -15,6 +15,7 @@ interface ProjectDetails {
     image?: string;
     images?: { src: string; alt: string }[];
     href?: string;
+    liveHref?: string;
     visual?: "health";
 }
 
@@ -32,10 +33,12 @@ const projects: ProjectDetails[] = [
         href: "http://srgp.in/",
     },
     {
-        title: "BP Monitoring Dashboard",
-        category: "Health tracking application",
-        description: "Developed a responsive application for recording blood-pressure readings and reviewing timestamped measurement history.",
-        technologies: ["React", "TypeScript", "React Hooks", "Local Storage"],
+        title: "Pulse",
+        category: "Full-stack health application",
+        description: "Built Pulse, a full-stack blood-pressure journal with account-based access to readings, using a React frontend, ASP.NET Core API, and PostgreSQL.",
+        technologies: ["React", "TypeScript", "Vite", "ASP.NET Core", "Entity Framework Core", "PostgreSQL"],
+        href: "https://github.com/KhushiJaiswal09/BP-Monitoring-setup/tree/main/bp-monitoring",
+        liveHref: "https://bp-monitoring-setup.vercel.app/",
         visual: "health",
     },
     {
@@ -140,6 +143,18 @@ function Project() {
                                             : `View ${project.title} on GitHub`}
                                     >
                                         {project.href === "http://srgp.in/" ? "Visit live website" : "View on GitHub"}
+                                        {" "}<span aria-hidden="true">↗</span>
+                                    </a>
+                                )}
+                                {project.liveHref && (
+                                    <a
+                                        className="project-source-link"
+                                        href={project.liveHref}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        aria-label={`Visit ${project.title} live website`}
+                                    >
+                                        Visit live website
                                         {" "}<span aria-hidden="true">↗</span>
                                     </a>
                                 )}
