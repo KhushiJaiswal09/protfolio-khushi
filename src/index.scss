@@ -7,6 +7,7 @@
 
   --accent: #b4a0ff;
   --accent-strong: #c6b7ff;
+  --accent-foreground: #15121d;
   --bg: #101116;
   --surface: #14161d;
   --surface-raised: #191b24;
@@ -17,6 +18,7 @@
   --tag: rgba(190, 173, 255, 0.08);
   --tag-text: #d7ceef;
   --project-art-bg: #20202b;
+  --shadow-card: 0 28px 80px rgba(0, 0, 0, 0.18);
 }
 
 * {
@@ -77,6 +79,7 @@ button {
 .main-container.dark-mode {
   --accent: #b4a0ff;
   --accent-strong: #c6b7ff;
+  --accent-foreground: #15121d;
   --bg: #101116;
   --surface: #14161d;
   --surface-raised: #191b24;
@@ -87,22 +90,25 @@ button {
   --tag: rgba(190, 173, 255, 0.08);
   --tag-text: #d7ceef;
   --project-art-bg: #20202b;
+  --shadow-card: 0 28px 80px rgba(0, 0, 0, 0.18);
   color-scheme: dark;
 }
 
 .main-container.light-mode {
-  --accent: #6344cb;
-  --accent-strong: #7457d7;
-  --bg: #faf9fc;
-  --surface: #f2f0f7;
+  --accent: #5b3ab8;
+  --accent-strong: #4e31a8;
+  --accent-foreground: #fff;
+  --bg: #f8f7fb;
+  --surface: #f0eef6;
   --surface-raised: #fff;
-  --surface-hover: #f4f1fb;
-  --border: rgba(39, 32, 60, 0.13);
+  --surface-hover: #ebe7f4;
+  --border: rgba(39, 32, 60, 0.15);
   --text: #201d29;
-  --muted: #676372;
-  --tag: #f1edf9;
-  --tag-text: #40375c;
+  --muted: #5f5a6b;
+  --tag: #eeebf5;
+  --tag-text: #383149;
   --project-art-bg: #e9e6ef;
+  --shadow-card: 0 18px 48px rgba(39, 32, 60, 0.1);
   color-scheme: light;
 }
 
@@ -229,7 +235,7 @@ button {
 .personal-details-card:hover {
   transform: translateY(-3px);
   border-color: var(--accent);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-card);
 }
 
 .personal-details-card .section-eyebrow {

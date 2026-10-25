@@ -1,6 +1,15 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
+
+test('switches to light mode from the navigation control', () => {
+  const { container } = render(<App />);
+
+  fireEvent.click(screen.getByRole('button', { name: 'Switch to light mode' }));
+
+  expect(container.firstChild).toHaveClass('light-mode');
+  expect(screen.getByRole('button', { name: 'Switch to dark mode' })).toBeInTheDocument();
+});
 
 test('shows the current professional profile and downloadable résumé', () => {
   render(<App />);
