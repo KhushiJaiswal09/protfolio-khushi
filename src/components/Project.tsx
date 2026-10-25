@@ -4,6 +4,7 @@ import srgpWebsite from "../assets/images/srgp-website.jpg";
 import srgpComputerLab from "../assets/images/srgp-computer-lab.jpg";
 import plantonia from "../assets/images/Plantonia.jpg";
 import webClash from "../assets/images/Webclash.jpg";
+import pulsePreview from "../assets/images/pulse-preview.svg";
 import "../assets/styles/Project.scss";
 
 interface ProjectDetails {
@@ -13,6 +14,7 @@ interface ProjectDetails {
     technologies: string[];
     highlights?: string[];
     image?: string;
+    imageAlt?: string;
     images?: { src: string; alt: string }[];
     href?: string;
     liveHref?: string;
@@ -33,13 +35,14 @@ const projects: ProjectDetails[] = [
         href: "http://srgp.in/",
     },
     {
-        title: "Pulse",
+        title: "Pulse : Blood Pressure Journal ",
         category: "Full-stack health application",
         description: "Built Pulse, a full-stack blood-pressure journal with account-based access to readings, using a React frontend, ASP.NET Core API, and PostgreSQL.",
-        technologies: ["React", "TypeScript", "Vite", "ASP.NET Core", "Entity Framework Core", "PostgreSQL"],
-        href: "https://github.com/KhushiJaiswal09/BP-Monitoring-setup/tree/main/bp-monitoring",
+        technologies: ["React", "TypeScript", "Vite", "ASP.NET Core", "Entity Framework Core", "PostgreSQL", "Swagger"],
+        highlights: ["Secure cross-device BP tracking", "Trend charts, averages & CSV export"],
+        image: pulsePreview,
+        imageAlt: "Pulse blood pressure journal dashboard preview",
         liveHref: "https://bp-monitoring-setup.vercel.app/",
-        visual: "health",
     },
     {
         title: "Face Emotion Recognition",
@@ -89,7 +92,7 @@ function Project() {
                                     <div className="project-image-single">
                                         <img
                                             src={project.image}
-                                            alt={`${project.title} project preview`}
+                                            alt={project.imageAlt ?? `${project.title} project preview`}
                                         />
                                     </div>
                                 ) : (
@@ -132,31 +135,35 @@ function Project() {
                                         <li key={technology}>{technology}</li>
                                     ))}
                                 </ul>
-                                {project.href && (
-                                    <a
-                                        className="project-source-link"
-                                        href={project.href}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        aria-label={project.href === "http://srgp.in/"
-                                            ? "View SRGP Institutional Web Platform website"
-                                            : `View ${project.title} on GitHub`}
-                                    >
-                                        {project.href === "http://srgp.in/" ? "Visit live website" : "View on GitHub"}
-                                        {" "}<span aria-hidden="true">↗</span>
-                                    </a>
-                                )}
-                                {project.liveHref && (
-                                    <a
-                                        className="project-source-link"
-                                        href={project.liveHref}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        aria-label={`Visit ${project.title} live website`}
-                                    >
-                                        Visit live website
-                                        {" "}<span aria-hidden="true">↗</span>
-                                    </a>
+                                {(project.href || project.liveHref) && (
+                                    <div className="project-links">
+                                        {project.href && (
+                                            <a
+                                                className="project-source-link"
+                                                href={project.href}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                aria-label={project.href === "http://srgp.in/"
+                                                    ? "View SRGP Institutional Web Platform website"
+                                                    : `View ${project.title} on GitHub`}
+                                            >
+                                                {project.href === "http://srgp.in/" ? "Visit live website" : "View on GitHub"}
+                                                {" "}<span aria-hidden="true">↗</span>
+                                            </a>
+                                        )}
+                                        {project.liveHref && (
+                                            <a
+                                                className="project-source-link"
+                                                href={project.liveHref}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                aria-label={`Visit ${project.title} live website`}
+                                            >
+                                                Visit live website
+                                                {" "}<span aria-hidden="true">↗</span>
+                                            </a>
+                                        )}
+                                    </div>
                                 )}
                             </div>
                         </article>

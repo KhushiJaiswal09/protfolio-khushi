@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" fill="none">
+  <rect width="1200" height="460" fill="#F4F2F9"/>
+  <rect x="24" y="24" width="1152" height="412" rx="20" fill="#FFFFFF"/>
+  <path d="M44 24h194v412H44a20 20 0 0 1-20-20V44a20 20 0 0 1 20-20Z" fill="#F9F8FC"/>
+  <path d="M238 24h918a20 20 0 0 1 20 20v372a20 20 0 0 1-20 20H238V24Z" fill="#FFF"/>
+  <path d="M238 24v412" stroke="#EAE7F0"/>
+  <circle cx="65" cy="67" r="19" fill="#5B4BC4"/>
+  <path d="M55 68h7l4-9 7 18 5-9h8" stroke="#FFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="96" y="74" fill="#25213B" font-family="Arial,sans-serif" font-size="25" font-weight="700">pulse.</text>
+  <text x="52" y="128" fill="#8B879A" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1.6">WORKSPACE</text>
+  <rect x="43" y="145" width="177" height="42" rx="10" fill="#EEEBFA"/>
+  <circle cx="64" cy="166" r="6" fill="#5B4BC4"/>
+  <text x="82" y="171" fill="#4B3DA8" font-family="Arial,sans-serif" font-size="14" font-weight="700">Overview</text>
+  <circle cx="64" cy="215" r="6" fill="#C0BDCA"/>
+  <text x="82" y="220" fill="#625F70" font-family="Arial,sans-serif" font-size="14">Reading history</text>
+  <circle cx="64" cy="264" r="6" fill="#C0BDCA"/>
+  <text x="82" y="269" fill="#625F70" font-family="Arial,sans-serif" font-size="14">Trends</text>
+  <rect x="43" y="342" width="177" height="72" rx="12" fill="#F0F8F5"/>
+  <circle cx="62" cy="365" r="5" fill="#48AA8D"/>
+  <text x="75" y="369" fill="#356B5D" font-family="Arial,sans-serif" font-size="12" font-weight="700">Private by design</text>
+  <text x="56" y="390" fill="#71877F" font-family="Arial,sans-serif" font-size="10">Your journal is private</text>
+  <text x="56" y="404" fill="#71877F" font-family="Arial,sans-serif" font-size="10">to your account.</text>
+  <text x="276" y="65" fill="#888496" font-family="Arial,sans-serif" font-size="12">Workspace</text>
+  <text x="345" y="65" fill="#B4B0BE" font-family="Arial,sans-serif" font-size="12">/</text>
+  <text x="362" y="65" fill="#302C42" font-family="Arial,sans-serif" font-size="12" font-weight="700">Overview</text>
+  <text x="276" y="112" fill="#777386" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4">YOUR HEALTH, AT A GLANCE</text>
+  <text x="276" y="149" fill="#29263B" font-family="Arial,sans-serif" font-size="27" font-weight="700">A clearer picture of your heart.</text>
+  <text x="276" y="174" fill="#827F8F" font-family="Arial,sans-serif" font-size="13">Small, consistent check-ins help reveal the bigger picture.</text>
+  <rect x="997" y="126" width="151" height="42" rx="10" fill="#5B4BC4"/>
+  <text x="1021" y="152" fill="#FFF" font-family="Arial,sans-serif" font-size="12" font-weight="700">＋  Log a reading</text>
+  <rect x="276" y="197" width="270" height="91" rx="12" fill="#FFF" stroke="#EAE7F0"/>
+  <circle cx="299" cy="221" r="7" fill="#EEEAFB"/>
+  <path d="M296 221h3l2-4 3 8 2-4h3" stroke="#5B4BC4" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="315" y="225" fill="#777386" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing=".8">LATEST READING</text>
+  <text x="296" y="263" fill="#AAA6B4" font-family="Arial,sans-serif" font-size="23" font-weight="700">— / —</text>
+  <text x="374" y="263" fill="#92909E" font-family="Arial,sans-serif" font-size="11">mmHg</text>
+  <rect x="562" y="197" width="270" height="91" rx="12" fill="#FFF" stroke="#EAE7F0"/>
+  <circle cx="585" cy="221" r="7" fill="#EAF5F1"/>
+  <path d="M582 221h3l2-4 3 8 2-4h3" stroke="#3D9B7D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="601" y="225" fill="#777386" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing=".8">7-READING AVERAGE</text>
+  <text x="582" y="263" fill="#AAA6B4" font-family="Arial,sans-serif" font-size="23" font-weight="700">— / —</text>
+  <text x="660" y="263" fill="#92909E" font-family="Arial,sans-serif" font-size="11">mmHg</text>
+  <rect x="848" y="197" width="300" height="91" rx="12" fill="#FFF" stroke="#EAE7F0"/>
+  <circle cx="871" cy="221" r="7" fill="#F0EDF8"/>
+  <path d="M871 217v5l3 2" stroke="#7568C4" stroke-width="1.4" stroke-linecap="round"/>
+  <text x="887" y="225" fill="#777386" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing=".8">THIS WEEK</text>
+  <text x="868" y="263" fill="#302C42" font-family="Arial,sans-serif" font-size="23" font-weight="700">0</text>
+  <text x="888" y="263" fill="#92909E" font-family="Arial,sans-serif" font-size="11">readings</text>
+  <rect x="276" y="308" width="872" height="103" rx="12" fill="#FFF" stroke="#EAE7F0"/>
+  <text x="296" y="333" fill="#888496" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="1.1">THE BIGGER PICTURE</text>
+  <text x="296" y="354" fill="#302C42" font-family="Arial,sans-serif" font-size="14" font-weight="700">Your blood pressure trend</text>
+  <path d="M296 382h832" stroke="#F0EEF4"/>
+  <path d="M296 394h832" stroke="#F0EEF4"/>
+  <path d="M296 406h832" stroke="#F0EEF4"/>
+  <text x="568" y="382" fill="#9692A1" font-family="Arial,sans-serif" font-size="11">Your trend will appear here</text>
+  <text x="549" y="399" fill="#B0ADBA" font-family="Arial,sans-serif" font-size="9">Log readings to spot patterns over time</text>
+</svg>
